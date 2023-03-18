@@ -3,7 +3,7 @@
 #include <time.h>
 
 /**
-* main - print if the number is postive, zero, or negative
+* main - prints if the last digit if n is greater or less than 5 or equal to 0
 *
 * Description: using the main function
 * this program prints "the number n is positive, zero, or negative
@@ -19,15 +19,15 @@ int main(void)
 	ld = n % 10;
 	if (ld > 5)
 	{
-		printf("Last degit of %d is %d and is greater than 5\n", n, ld);
+		printf("Last digit of %d is %d and is greater than 5\n", n, ld);
 	}
 	else if (ld == 0)
 	{
-		printf("Last degit of %d is %d and is 0\n", n, ld);
+		printf("Last digit of %d is %d and is 0\n", n, ld);
 	}
 	else
 	{
-		printf("Last degit of %d is %d and is less than 6 and not 0\n", n, ld);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, ld);
 	}
 	return (0);
 }
