@@ -1,7 +1,8 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
-* main - upper cases with normal
+* main - print the alphabet
 *
 * Description: using the main function
 * this program prints "the number n is positive, zero, or negative
@@ -9,15 +10,16 @@
 */
 int main(void)
 {
-for (char c = 'a'; c <= 'z'; c++)
+        int i;
+	int j;
+for (i = 97; i <= 122; i++)
 {
-	putchar(c);
+        putchar(i);
 }
-for (char c = 'A'; c <= 'Z'; c++)
+for (j = 65; j <= 90; j++)
 {
-	putchar(c);
+        putchar(j);
 }
 putchar('\n');
 return (0);
 }
-
