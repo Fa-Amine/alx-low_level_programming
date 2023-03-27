@@ -1,19 +1,19 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * puts2 - show the thing and jumps one step
- *
- * @str : might use it later idk
+ * puts2- prints out every other character of a string
+ * @str: the string to print
  */
 void puts2(char *str)
 {
 	int i;
-	int len = strlen(str);
 
-	for (i = 0; i <= len ; i = i + 2)
+	for (i = 0; *str != '\0'; i++)
 	{
-		_putchar(str[i]);
+		if (i % 2 == 0)
+			_putchar(*str);
+		str++;
 	}
+
 _putchar('\n');
 }
