@@ -1,22 +1,36 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * cap_string - capitalaizes strings
  *
- * @a: the string
+ * @str: the string
  * Return: the string or nth
  */
-char *cap_string(char *a)
+char *cap_string(char *str)
 {
 	int i;
+	int len = strlen(str);
 
-	i = 0;
-	while (a[i] != '\0')
+	if (str[0] >= 'a' && str[0] <= 'z')
 	{
-		if (a[i] >= 'A' && a[i] <= 'Z')
+		str[0] -= 32;
+	}
+	for (i = 1; i < len; i++)
+	{
+		if (str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' ||
+		str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
+		str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' ||
+		str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' ||
+		str[i - 1] == '}')
 		{
-			a[i] = a[i] + 32;
+		if (str[i] >= 'a' && str[i] <= 'z')
+		{
+			str[i] -= 32;
+		}
 		}
 	}
-return (a);
+
+return (str);
 }
+
